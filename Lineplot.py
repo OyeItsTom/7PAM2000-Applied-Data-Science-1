@@ -6,7 +6,6 @@ Created on Sun Mar  5 00:09:45 2023
 @author: tomthomas
 """
 
-import numpy as np
 import pandas as pd
 from matplotlib import pyplot as plt
 
@@ -14,7 +13,7 @@ from matplotlib import pyplot as plt
 def readData() :
     #importing the multi-indexing CSV file using the Pandas read csv() function. In order to use the first two rows of the CSV file as the column headings, the header parameter is set to [0,1]. 
     #The first column should be used as the row index, hence the index col option is set to [0] to denote this.
-    data1 = pd.read_csv('/Users/Shared/Previously Relocated Items/Security/Tom/DS/7PAM2000 Applied Data Science 1/Train Fares.csv',header=[0,1],index_col=[0])
+    data1 = pd.read_csv('Train Fares.csv',header=[0,1],index_col=[0])
     #selects only the "All operators" column from data1 to build a new DataFrame Fares. The DataFrame is cut using the.loc method by choosing all rows (:) and the "All operators" column.
     Fares=data1.loc[:, 'All operators']
     #With the.drop() method, the last row of Fares is removed, which removes data that can't be used to make a line plot.
@@ -48,7 +47,7 @@ def linePlot(x,Fares):
     #to develop a legend for the plot
     plt.legend()
     #saving the lineplot as a picture file
-    plt.savefig("/Users/Shared/Previously Relocated Items/Security/Tom/DS/7PAM2000 Applied Data Science 1/linplot.png",dpi=100)
+    plt.savefig("inplot.png",dpi=100)
     #to make the plot visible on the screen.
     plt.show()
     return
