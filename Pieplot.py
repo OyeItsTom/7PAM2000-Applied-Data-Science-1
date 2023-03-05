@@ -6,7 +6,7 @@ Created on Sun Mar  5 00:26:59 2023
 @author: tomthomas
 """
 
-import numpy as np
+
 import pandas as pd
 from matplotlib import pyplot as plt
 
@@ -39,7 +39,7 @@ def piePlot(data2_updated):
     ax2.set_title('Great Britain, 2021–2022, proportion of passenger revenue by ticket type',fontweight='bold')
     ax2.text(0, 0, f'Total Revenue: £{total2:,} Millions',ha='left', va='baseline', transform=ax2.transAxes, fontsize=10, fontweight='bold')
     #Save the figure
-    plt.savefig("/Users/Shared/Previously Relocated Items/Security/Tom/DS/7PAM2000 Applied Data Science 1/Pieplot.png",dpi=100)
+    plt.savefig("Pieplot.png",dpi=100)
     #Show the figure
     plt.show()
     return
