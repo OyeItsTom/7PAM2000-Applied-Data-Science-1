@@ -7,14 +7,13 @@ Created on Sun Mar  5 00:19:21 2023
 """
 
 
-import numpy as np
 import pandas as pd
 from matplotlib import pyplot as plt
 
 #This function is helpful for reading in and preprocessing rail revenue data in preparation for further analysis, particularly where the "Time period" column is crucial for examining trends over time.
 def readData1():
     #The Excel file is read using the Pandas read excel() function, and the resulting DataFrame is then assigned to the variable data2.
-    data2 = pd.read_excel("/Users/Shared/Previously Relocated Items/Security/Tom/DS/7PAM2000 Applied Data Science 1/Rail Revenue.xlsx")
+    data2 = pd.read_excel("Rail Revenue.xlsx")
     #sets the index of the data2 to be the "Time period" column when creating a new DataFrame with the name data2_updated.
     data2_updated=data2.set_index('Time period')
     #to remove the last column from the DataFrame data2_updated
@@ -37,7 +36,7 @@ def barPlot(data):
     plt.ylabel('Income in millions(GBP)',fontsize=16, fontweight='bold')
     plt.title('Great Britains rail passenger revenue from April 2010 to March 2022',fontsize=16, fontweight='bold')
     #saving the barplot as a picture file
-    plt.savefig("/Users/Shared/Previously Relocated Items/Security/Tom/DS/7PAM2000 Applied Data Science 1/Barplot.png",dpi=100)
+    plt.savefig("Barplot.png",dpi=100)
     # Display the plot
     plt.show()
     return
